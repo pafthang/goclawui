@@ -9,6 +9,8 @@ export { default as Pagination } from './Pagination.svelte';
 export { default as DragPreview } from './DragPreview.svelte';
 export { default as FileTreeFileIcon } from './FileTreeFileIcon.svelte';
 export { default as WikilinkPill } from './WikilinkPill.svelte';
+export { default as TreeItem } from './TreeItem.svelte';
+export { default as FileTreePanel } from './FileTreePanel.svelte';
 
 // Dialogs & Forms
 export { default as ConfirmDialog } from './ConfirmDialog.svelte';
