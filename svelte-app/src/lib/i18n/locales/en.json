@@ -1,0 +1,53 @@
+{
+	"common": {
+		"loading": "Loading...",
+		"error": "Error",
+		"success": "Success",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"save": "Save",
+		"delete": "Delete",
+		"edit": "Edit",
+		"create": "Create",
+		"search": "Search",
+		"filter": "Filter",
+		"sort": "Sort",
+		"back": "Back",
+		"next": "Next",
+		"previous": "Previous",
+		"close": "Close",
+		"open": "Open",
+		"yes": "Yes",
+		"no": "No"
+	},
+	"auth": {
+		"login": "Login",
+		"logout": "Logout",
+		"register": "Register",
+		"email": "Email",
+		"password": "Password",
+		"forgotPassword": "Forgot Password?",
+		"resetPassword": "Reset Password",
+		"signIn": "Sign In",
+		"signUp": "Sign Up",
+		"welcome": "Welcome",
+		"goodbye": "Goodbye"
+	},
+	"navigation": {
+		"home": "Home",
+		"dashboard": "Dashboard",
+		"settings": "Settings",
+		"profile": "Profile",
+		"about": "About",
+		"contact": "Contact",
+		"help": "Help"
+	},
+	"errors": {
+		"notFound": "Page not found",
+		"serverError": "Server error",
+		"unauthorized": "Unauthorized",
+		"forbidden": "Forbidden",
+		"networkError": "Network error",
+		"validationError": "Validation error"
+	}
+}

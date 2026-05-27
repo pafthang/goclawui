@@ -1,0 +1,53 @@
+{
+	"common": {
+		"loading": "Загрузка...",
+		"error": "Ошибка",
+		"success": "Успешно",
+		"cancel": "Отмена",
+		"confirm": "Подтвердить",
+		"save": "Сохранить",
+		"delete": "Удалить",
+		"edit": "Редактировать",
+		"create": "Создать",
+		"search": "Поиск",
+		"filter": "Фильтр",
+		"sort": "Сортировка",
+		"back": "Назад",
+		"next": "Далее",
+		"previous": "Назад",
+		"close": "Закрыть",
+		"open": "Открыть",
+		"yes": "Да",
+		"no": "Нет"
+	},
+	"auth": {
+		"login": "Вход",
+		"logout": "Выход",
+		"register": "Регистрация",
+		"email": "Электронная почта",
+		"password": "Пароль",
+		"forgotPassword": "Забыли пароль?",
+		"resetPassword": "Сброс пароля",
+		"signIn": "Войти",
+		"signUp": "Зарегистрироваться",
+		"welcome": "Добро пожаловать",
+		"goodbye": "До свидания"
+	},
+	"navigation": {
+		"home": "Главная",
+		"dashboard": "Панель управления",
+		"settings": "Настройки",
+		"profile": "Профиль",
+		"about": "О нас",
+		"contact": "Контакты",
+		"help": "Помощь"
+	},
+	"errors": {
+		"notFound": "Страница не найдена",
+		"serverError": "Ошибка сервера",
+		"unauthorized": "Не авторизован",
+		"forbidden": "Доступ запрещен",
+		"networkError": "Ошибка сети",
+		"validationError": "Ошибка валидации"
+	}
+}
