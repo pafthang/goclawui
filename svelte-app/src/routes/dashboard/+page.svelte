@@ -3,27 +3,27 @@
 </script>
 
 <div class="dashboard">
-	<h1>{$t('navigation.dashboard')}</h1>
+	<h1>{t('navigation.dashboard', 'common')}</h1>
 	
 	<div class="cards">
 		<div class="card">
-			<h3>Статистика</h3>
-			<p>Обзор ключевых показателей</p>
+			<h3>{t('dashboard.statistics', 'common')}</h3>
+			<p>{t('dashboard.statisticsDesc', 'common')}</p>
 		</div>
 		
 		<div class="card">
-			<h3>Активность</h3>
-			<p>Последние действия в системе</p>
+			<h3>{t('dashboard.activity', 'common')}</h3>
+			<p>{t('dashboard.activityDesc', 'common')}</p>
 		</div>
 		
 		<div class="card">
-			<h3>Уведомления</h3>
-			<p>Ваши последние уведомления</p>
+			<h3>{t('dashboard.notifications', 'common')}</h3>
+			<p>{t('dashboard.notificationsDesc', 'common')}</p>
 		</div>
 		
 		<div class="card">
-			<h3>Задачи</h3>
-			<p>Текущие задачи и дедлайны</p>
+			<h3>{t('dashboard.tasks', 'common')}</h3>
+			<p>{t('dashboard.tasksDesc', 'common')}</p>
 		</div>
 	</div>
 </div>

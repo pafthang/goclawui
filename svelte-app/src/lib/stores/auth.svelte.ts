@@ -183,3 +183,14 @@ function createAuthStore() {
 }
 
 export const authStore = createAuthStore();
+
+// Helper функция для установки пользователя (для совместимости)
+export function setUser(user: { id: string; name: string; email: string }) {
+	authStore.setCredentials('mock-token', user.id);
+	authStore.setConnected(true, { name: 'Goclaw', version: '1.0.0' });
+}
+
+// Helper функция для выхода (для совместимости)
+export function logout() {
+	authStore.logout();
+}

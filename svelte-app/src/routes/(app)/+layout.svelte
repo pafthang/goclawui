@@ -1,27 +1,23 @@
 <script lang="ts">
-	import { i18nStore } from '$lib/stores/i18n.store';
-	import { setupI18n, t } from '$lib/i18n';
+	import { i18nStore, t } from '$lib/i18n';
 	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 
 	let currentLocale = $state('en');
 
 	// Подписка на изменения локали
-	const unsubscribe = i18nStore.subscribe((state) => {
-		currentLocale = state.locale;
+	const unsubscribe = i18nStore.subscribe((locale) => {
+		currentLocale = locale;
 	});
-
-	// Инициализация i18n при монтировании
-	setupI18n();
 </script>
 
 <div class="layout">
 	<header class="header">
 		<nav class="nav">
-			<a href="/" class="logo">{$t('navigation.home')}</a>
+			<a href="/" class="logo">{t('navigation.home', 'common')}</a>
 			<div class="nav-links">
-				<a href="/dashboard">{$t('navigation.dashboard')}</a>
-				<a href="/settings">{$t('navigation.settings')}</a>
-				<a href="/profile">{$t('navigation.profile')}</a>
+				<a href="/dashboard">{t('navigation.dashboard', 'common')}</a>
+				<a href="/settings">{t('navigation.settings', 'common')}</a>
+				<a href="/profile">{t('navigation.profile', 'common')}</a>
 			</div>
 			<LanguageSwitcher />
 		</nav>

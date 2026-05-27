@@ -6,64 +6,40 @@ node_modules/
 dist/
 build/
 .svelte-kit/
-.caches/
 
 # Environment variables
 .env
 .env.local
-*.env.*
+.env.*
 
-# Logs
-*.log
-
-# IDE specific
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS specific
-.DS_Store
-Thumbs.db
+# Logs
+*.log
+
+# Temporary files
+*.tmp
 
 # Coverage reports
 coverage/
 htmlcov/
 .coverage
 
-# Python related (if any Python files exist in the project)
+# Python cache (if any Python files exist in the project)
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.pytest_cache/
-.mypy_cache/
 
-# Temporary files
-*.tmp
-*.temp
+# Package manager lock files
+package-lock.json
+yarn.lock
 
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
