@@ -1,0 +1,42 @@
+<script lang="ts">
+	import { cn } from '$lib/utils';
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link' | 'success' | 'warning' | 'info';
+		class?: string;
+		children?: Snippet;
+		[key: string]: unknown;
+	}
+
+	let {
+		variant = 'default',
+		class: className,
+		children,
+		...restProps
+	}: Props = $props();
+
+	const baseStyles = 'inline-flex items-center justify-center rounded-full border border-transparent px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden';
+
+	const variants = {
+		default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+		secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+		destructive: 'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
+		outline: 'border-border text-foreground hover:bg-accent hover:text-accent-foreground',
+		ghost: 'hover:bg-accent hover:text-accent-foreground',
+		link: 'text-primary underline-offset-4 hover:underline',
+		success: 'bg-emerald-500/15 text-emerald-700 border-emerald-500/25 dark:text-emerald-400 dark:bg-emerald-500/10 dark:border-emerald-500/20',
+		warning: 'bg-amber-500/15 text-amber-700 border-amber-500/25 dark:text-amber-400 dark:bg-amber-500/10 dark:border-amber-500/20',
+		info: 'bg-sky-500/15 text-sky-700 border-sky-500/25 dark:text-sky-400 dark:bg-sky-500/10 dark:border-sky-500/20'
+	};
+
+	let classes = $derived(
+		cn(baseStyles, variants[variant], className)
+	);
+</script>
+
+<span class={classes} {...restProps}>
+	{#if children}
+		{@render children()}
+	{/if}
+</span>
