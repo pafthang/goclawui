@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { t } from '$lib/i18n';
-	import { authStore, setUser } from '$lib/stores/auth.store';
+	import { authStore, setUser } from '$lib/stores/auth.svelte';
 
 	let email = $state('');
 	let password = $state('');
@@ -24,7 +24,7 @@
 			
 			window.location.href = '/dashboard';
 		} catch (err) {
-			error = 'Ошибка входа. Проверьте данные.';
+			error = t('auth.loginError', 'common');
 		} finally {
 			isLoading = false;
 		}
@@ -33,7 +33,7 @@
 
 <div class="login-container">
 	<div class="login-card">
-		<h1>{$t('auth.login')}</h1>
+		<h1>{t('auth.login', 'common')}</h1>
 		
 		<form onsubmit={handleLogin}>
 			{#if error}
@@ -41,7 +41,7 @@
 			{/if}
 			
 			<div class="form-group">
-				<label for="email">{$t('auth.email')}</label>
+				<label for="email">{t('auth.email', 'common')}</label>
 				<input
 					id="email"
 					type="email"
@@ -52,7 +52,7 @@
 			</div>
 			
 			<div class="form-group">
-				<label for="password">{$t('auth.password')}</label>
+				<label for="password">{t('auth.password', 'common')}</label>
 				<input
 					id="password"
 					type="password"
@@ -63,13 +63,13 @@
 			</div>
 			
 			<button type="submit" disabled={isLoading} class="submit-btn">
-				{isLoading ? $t('common.loading') : $t('auth.signIn')}
+				{isLoading ? t('common.loading', 'common') : t('auth.signIn', 'common')}
 			</button>
 		</form>
 		
 		<div class="footer-links">
-			<a href="/register">{$t('auth.signUp')}</a>
-			<a href="/forgot-password">{$t('auth.forgotPassword')}</a>
+			<a href="/register">{t('auth.signUp', 'common')}</a>
+			<a href="/forgot-password">{t('auth.forgotPassword', 'common')}</a>
 		</div>
 	</div>
 </div>

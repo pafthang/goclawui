@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { t } from '$lib/i18n';
-	import { authStore, logout, type User } from '$lib/stores/auth.store';
+	import { authStore, logout } from '$lib/stores/auth.svelte';
 
-	let user = $state<User | null>(null);
+	let userId = $state<string | null>(null);
+	let userEmail = $state<string | null>(null);
+	let userName = $state<string | null>(null);
 
 	// Подписка на изменения auth store
 	const unsubscribe = authStore.subscribe((state) => {
-		user = state.user;
+		userId = state.userId || null;
+		userEmail = state.token ? 'user@example.com' : null; // Mock email
+		userName = state.token ? 'User' : null; // Mock name
 	});
 
 	function handleLogout() {
@@ -15,27 +19,27 @@
 </script>
 
 <div class="profile">
-	<h1>{$t('navigation.profile')}</h1>
+	<h1>{t('navigation.profile', 'common')}</h1>
 	
-	{#if user}
+	{#if userId}
 		<div class="profile-card">
 			<div class="avatar">
-				{user.avatar ? `<img src={user.avatar} alt={user.name}>` : `<div class="avatar-placeholder">{user.name.charAt(0)}</div>`}
+				<div class="avatar-placeholder">{userName?.charAt(0) ?? 'U'}</div>
 			</div>
 			
 			<div class="info">
-				<h2>{user.name}</h2>
-				<p>{user.email}</p>
+				<h2>{userName}</h2>
+				<p>{userEmail}</p>
 			</div>
 			
 			<button onclick={handleLogout} class="logout-btn">
-				{$t('auth.logout')}
+				{t('auth.logout', 'common')}
 			</button>
 		</div>
 	{:else}
 		<div class="not-logged-in">
-			<p>Вы не авторизованы</p>
-			<a href="/login" class="login-link">{$t('auth.login')}</a>
+			<p>{t('profile.notLoggedIn', 'common')}</p>
+			<a href="/login" class="login-link">{t('auth.login', 'common')}</a>
 		</div>
 	{/if}
 </div>

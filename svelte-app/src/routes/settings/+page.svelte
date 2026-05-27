@@ -3,27 +3,27 @@
 </script>
 
 <div class="settings">
-	<h1>{$t('navigation.settings')}</h1>
+	<h1>{t('navigation.settings', 'common')}</h1>
 	
 	<div class="settings-sections">
 		<section class="section">
-			<h2>Профиль</h2>
-			<p>Настройки вашего профиля</p>
+			<h2>{t('settings.profile', 'common')}</h2>
+			<p>{t('settings.profileDesc', 'common')}</p>
 		</section>
 		
 		<section class="section">
-			<h2>Безопасность</h2>
-			<p>Пароль и двухфакторная аутентификация</p>
+			<h2>{t('settings.security', 'common')}</h2>
+			<p>{t('settings.securityDesc', 'common')}</p>
 		</section>
 		
 		<section class="section">
-			<h2>Уведомления</h2>
-			<p>Настройка уведомлений</p>
+			<h2>{t('settings.notifications', 'common')}</h2>
+			<p>{t('settings.notificationsDesc', 'common')}</p>
 		</section>
 		
 		<section class="section">
-			<h2>Интеграции</h2>
-			<p>Подключенные сервисы</p>
+			<h2>{t('settings.integrations', 'common')}</h2>
+			<p>{t('settings.integrationsDesc', 'common')}</p>
 		</section>
 	</div>
 </div>
