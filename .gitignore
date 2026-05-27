@@ -2,49 +2,26 @@
 # Dependencies
 node_modules/
 
-# Build outputs
+# Build artifacts
 dist/
 build/
 .svelte-kit/
-.vercel/
+.caches/
 
-# Environment variables
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
 .env
 .env.local
 *.env.*
 
-# IDE files
+# Editors
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-.pytest_cache/
-.mypy_cache/
-
-# Distribution / packaging
-*.tar.gz
-*.whl
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Svelte specific
-.svelte/
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
